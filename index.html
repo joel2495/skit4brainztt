@@ -9,14 +9,14 @@
       gtag('config', 'G-H8J35YHP2R');
 
       function goToApp() {
-        // Updated to your new handle: evansentertainme0
-        const appLink = "snssdk1233://user/profile/evansentertainme0"; 
-        const webFallback = "https://www.tiktok.com/@evansentertainme0";
+        // We use the standard web link. The phone's OS will see this 
+        // and ask to open it in the TikTok app automatically.
+        const ttLink = "https://www.tiktok.com/@evansentertainme0";
         
         gtag('event', 'qr_scan', { 'event_label': 'TikTok Profile' });
         
-        window.location.href = appLink;
-        setTimeout(function() { window.location.href = webFallback; }, 600);
+        // This 'replace' method is cleaner for mobile redirects
+        window.location.replace(ttLink);
       }
       window.onload = goToApp;
     </script>
@@ -24,7 +24,7 @@
 <body style="background:#000; color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; margin:0; text-align:center;">
     <h1 style="font-size:3rem; letter-spacing:5px;">SKIT 4 BRAINZ</h1>
     
-    <a href="snssdk1233://user/profile/evansentertainme0" onclick="goToApp()" 
+    <a href="https://www.tiktok.com/@evansentertainme0" onclick="goToApp()" 
        style="margin-top:20px; padding:15px 30px; background:#010101; color:#fff; text-decoration:none; border-radius:50px; font-weight:bold; font-size:1.2rem; border: 2px solid #ff0050; box-shadow: -3px 0 #00f2ea, 3px 0 #ff0050;">
        OPEN IN TIKTOK
     </a>
