@@ -9,14 +9,13 @@
       gtag('config', 'G-H8J35YHP2R');
 
       function goToApp() {
-        // Deep link for TikTok profile
+        // Updated to your new handle: evansentertainme0
         const appLink = "snssdk1233://user/profile/evansentertainme0"; 
         const webFallback = "https://www.tiktok.com/@evansentertainme0";
         
         gtag('event', 'qr_scan', { 'event_label': 'TikTok Profile' });
         
         window.location.href = appLink;
-        // If they don't have the app, send them to the web version
         setTimeout(function() { window.location.href = webFallback; }, 600);
       }
       window.onload = goToApp;
